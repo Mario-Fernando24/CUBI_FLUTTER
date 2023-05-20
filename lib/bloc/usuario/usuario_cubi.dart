@@ -16,4 +16,10 @@ class UsuarioCubi extends Cubit<UsuarioState> {
   //valor inicjal del cubi (contructor)  
   UsuarioCubi() : super( UsuarioInitial());
 
+
+  void seleccionarUsuario(Usuario usuario){
+    //el imit va a emitir el nuevo estado
+    emit( UsuarioActivo(usuario));
+  }
+
 }

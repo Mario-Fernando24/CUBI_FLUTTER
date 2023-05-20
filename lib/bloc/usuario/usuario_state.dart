@@ -8,14 +8,31 @@ abstract class UsuarioState{}
 //englobe todos los estado que nuestra aplicacion va a tener 
 
 class UsuarioInitial extends UsuarioState{
-
    //cuando tengo un usuario o no
    final existeUsuario = false; 
-
-   @override
-  String toString() {
-    // TODO: implement toString
-    return 'UsuarioInitial: Existe usuario : false';
-  }
-
 }
+
+class UsuarioActivo extends UsuarioState{
+    
+     final existeUsuario = true; 
+     final Usuario usuario;
+
+    UsuarioActivo(this.usuario);
+}
+
+
+
+
+
+
+
+
+
+
+
+//En la próxima clase ustedes me verán escribir la siguiente línea de código
+
+//context.bloc()
+//La cual ya no es válida desde la versión 7 de Flutter_bloc, entonces deben de escribir esto:
+
+//context.read()

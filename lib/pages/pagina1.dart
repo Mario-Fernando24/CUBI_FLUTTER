@@ -13,6 +13,10 @@ class Pagina1Page extends StatelessWidget {
       ),
       body: BlocBuilder<UsuarioCubi, UsuarioState>(
         builder: ( _ , state) {
+          
+          print('==========================================');
+          print(state);
+          print('==========================================');
             
            if(state is UsuarioInitial){
                 return Center(
