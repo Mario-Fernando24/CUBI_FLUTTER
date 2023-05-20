@@ -2,13 +2,18 @@
 //hacer peticiones http
 //cambios el estado
 import 'package:flutter_bloc/flutter_bloc.dart';
+//libreria mas pequeña que material
 import 'package:meta/meta.dart';
 import 'package:singlenton/models/usuario.dart';
-// part 'usuario_state.dart'; 
+// va hacer parte de esgte cubi la parte de los estados  
 part 'usuario_state.dart';
 //que tipo de informacion va a tener
-class UsuarioCubi extends Cubit<UsuarioCubi> {
+//extiende de cubi 
+
+// ubit<UsuarioCubi> {que tipo de informacion va a fluir
+class UsuarioCubi extends Cubit<UsuarioState> {
   
-  UsuarioCubi(super.initialState);  
+  //valor inicjal del cubi (contructor)  
+  UsuarioCubi() : super( UsuarioInitial());
 
 }
