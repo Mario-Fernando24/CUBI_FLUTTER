@@ -41,14 +41,17 @@ class BodyScaffold extends StatelessWidget {
         //  }
 
         switch (state.runtimeType) {
+
           case UsuarioInitial:
+          
+          print(state);
               return Center( child: Text('No hay informacion del usuario'));
             break;
-          case InformacionUsuario:
+          case UsuarioActivo:
               return InformacionUsuario((state as UsuarioActivo).usuario);
             break;
           default:
-          return Center( child: Text('Estado no reconocido'));
+          return Center( child: Text('Estado no reconocido${state}'));
         }
 
 
