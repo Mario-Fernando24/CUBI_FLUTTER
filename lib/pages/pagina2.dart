@@ -47,7 +47,17 @@ class Pagina2Page extends StatelessWidget {
               MaterialButton(
               color: Colors.blue[100],
               child: Text('Añadir profesión'),
-              onPressed: (){}
+              onPressed: (){
+                usuarioCubit.agregarProfesion('Ingeniero');
+              }
+            ),
+
+             MaterialButton(
+              color: Colors.blue[100],
+              child: Text('Borrar'),
+              onPressed: (){
+                usuarioCubit.deleteUsuario();
+              }
             )
           ],
         )

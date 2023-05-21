@@ -33,4 +33,27 @@ class UsuarioCubi extends Cubit<UsuarioState> {
      }
   }
 
+  void agregarProfesion(String profesion){
+      
+      final currentState = state;
+      //valido que si estoy en este estado //
+     if(currentState is UsuarioActivo){
+      
+      final newProfesiones = [
+        ...?currentState.usuario.profesion,
+        '${profesion} ${currentState.usuario.profesion!.length + 1}'
+      ];
+
+      final newUser=currentState.usuario.copyWith(profesion: newProfesiones);
+      emit(UsuarioActivo(newUser));
+
+     }
+
+  }
+
+
+  void deleteUsuario(){
+    emit(UsuarioInitial());
+  }
+
 }
