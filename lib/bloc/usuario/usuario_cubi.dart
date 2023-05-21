@@ -19,7 +19,7 @@ class UsuarioCubi extends Cubit<UsuarioState> {
 
   void seleccionarUsuario(Usuario usuario){
     //el imit va a emitir el nuevo estado
-    emit( UsuarioActivo(usuario));
+    emit(UsuarioActivo(usuario));
   }
 
 }
